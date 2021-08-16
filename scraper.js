@@ -68,6 +68,7 @@ function getPatternData(patternUrls) {
               "div.breadNPaging.hidden-sm > div > div > div.col-xs-12 > p > span"
             ).text()
           );
+          const imageSrc = $("#imagemodele0 > a > img").attr("src");
 
           threadTable.each(function () {
             const rawThread = $(this)
@@ -87,6 +88,7 @@ function getPatternData(patternUrls) {
           patternData = {
             name: patternName,
             url: url,
+            imageLink: imageSrc,
             threadData: threads,
           };
           return patternData;
